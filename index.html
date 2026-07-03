@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>उपल पत्रिका | Upal Patrika</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="hi">
+  <div class="langbar">
+    <span>भाषा / Language:</span>
+    <button class="lbtn on" id="btn-hi" onclick="setLang('hi')">हिन्दी</button>
+    <button class="lbtn" id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="#home">
+        <div class="brand-txt">
+          <img src="assets/img/logo.png" alt="">
+          <!-- <div class="b-sub" data-h>साहित्य कला चेतना परिवार</div>
+          <div class="b-sub" data-e>Sahitya Kala Chetna Parivar</div> -->
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home" data-h>मुख्य पृष्ठ</a><a href="#home" data-e>Home</a></li>
+          <li><a href="#about" data-h>हमारे बारे में</a><a href="#about" data-e>About</a></li>
+          <li><a href="#magazine" data-h>पत्रिका</a><a href="#magazine" data-e>Magazine</a></li>
+          <li><a href="#emag" data-h>ई-पत्रिका</a><a href="#emag" data-e>E-Magazine</a></li>
+          <li><a href="#rachna" data-h>रचना आमंत्रण</a><a href="#rachna" data-e>Submit Work</a></li>
+          <li><a href="#contact" data-h>संपर्क</a><a href="#contact" data-e>Contact</a></li>
+        </ul>
+      </nav>
+      <button class="ham" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mob-nav" id="mobnav">
+      <a href="#home" onclick="closeMob()" data-h>🏠 मुख्य पृष्ठ</a><a href="#home" onclick="closeMob()" data-e>🏠
+        Home</a>
+      <a href="#about" onclick="closeMob()" data-h>📖 हमारे बारे में</a><a href="#about" onclick="closeMob()" data-e>📖
+        About Us</a>
+      <a href="#magazine" onclick="closeMob()" data-h>📕 पत्रिका</a><a href="#magazine" onclick="closeMob()" data-e>📕
+        Magazine</a>
+      <a href="#emag" onclick="closeMob()" data-h>💻 ई-पत्रिका</a><a href="#emag" onclick="closeMob()" data-e>💻
+        E-Magazine</a>
+      <a href="#rachna" onclick="closeMob()" data-h>✍️ रचना आमंत्रण</a><a href="#rachna" onclick="closeMob()" data-e>✍️
+        Submit Work</a>
+      <a href="#contact" onclick="closeMob()" data-h>📞 संपर्क</a><a href="#contact" onclick="closeMob()" data-e>📞
+        Contact</a>
+      <a class="mob-book-btn" href="https://issuu.com" target="_blank" rel="noopener" data-h>📖 पत्रिका ऑनलाइन पढ़ें</a>
+      <a class="mob-book-btn" href="https://issuu.com" target="_blank" rel="noopener" data-e>📖 Read Magazine Online</a>
+    </div>
+  </header>
+  <!-- TICKER seamless no-gap -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <!-- HERO -->
+  <section id="home" style="padding:0">
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-pill" data-h>📚 कविता · कहानी · निबंध · समीक्षा</div>
+        <div class="hero-pill" data-e>📚 Poetry · Story · Essay · Review</div>
+        <h1 data-h>उपल पत्रिका</h1>
+        <h1 data-e>Upal Patrika</h1>
+        <div class="hero-en-title" data-h>Upal Patrika — मासिक साहित्यिक पत्रिका</div>
+        <div class="hero-en-title" data-e>Monthly Literary Magazine since 2010</div>
+        <p class="hero-tag" data-h>भाषा, कला, साहित्य और संस्कृति जागरूकता हेतु प्रतिबद्ध</p>
+        <p class="hero-tag" data-e>Committed to awareness of language, art, literature and culture</p>
+        <div class="hero-actions">
+          <a class="btn-g" href="#emag" data-h>ई-पत्रिका पढ़ें ↓</a><a class="btn-g" href="#emag" data-e>Read E-Magazine
+            ↓</a>
+          <a class="btn-o" href="#rachna" data-h>रचना भेजें</a><a class="btn-o" href="#rachna" data-e>Submit Your
+            Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- STATS -->
+  <div class="statsbar fi">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-n">२०१०</div>
+        <div class="stat-l" data-h>स्थापना वर्ष</div>
+        <div class="stat-l" data-e>Founded</div>
+      </div>
+      <div>
+        <div class="stat-n">५०+</div>
+        <div class="stat-l" data-h>प्रकाशित अंक</div>
+        <div class="stat-l" data-e>Issues Published</div>
+      </div>
+      <div>
+        <div class="stat-n">५००+</div>
+        <div class="stat-l" data-h>रचनाकार</div>
+        <div class="stat-l" data-e>Contributors</div>
+      </div>
+      <div>
+        <div class="stat-n">१२</div>
+        <div class="stat-l" data-h>राज्यों से पाठक</div>
+        <div class="stat-l" data-e>States Covered</div>
+      </div>
+    </div>
+  </div>
+  <!-- ABOUT -->
+  <section id="about" class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <div class="eyebrow" data-h>हमारे बारे में</div>
+        <div class="eyebrow" data-e>About Us</div>
+        <h2 data-h>साहित्य कला चेतना परिवार</h2>
+        <h2 data-e>Sahitya Kala Chetna Parivar</h2>
+        <p data-h>हिंदी साहित्य, कला और संस्कृति के संरक्षण व प्रचार के लिए समर्पित संस्था</p>
+        <p data-e>An organisation dedicated to preserving and promoting Hindi literature, art and culture</p>
+        <div class="rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="card fi">
+          <h3
+            style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:14px;display:flex;align-items:center;gap:10px">
+            <span class="icon-box">🏛️</span><span data-h>संस्था का परिचय</span><span data-e>About the
+              Organisation</span>
+          </h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:12px" data-h>साहित्य कला चेतना परिवार का उद्देश्य
+            साहित्य, कला, संस्कृति एवं सामाजिक चेतना के क्षेत्र में रचनात्मक वातावरण का निर्माण करते हुए समाज में
+            सकारात्मक विचारों का प्रसार करना है। इसकी स्थापना 8 अगस्त 2024 को राजस्थान के नोहर शहर के एक युवा कवि,
+            रंगकर्मी, चित्रकार कमल अग्रवाल द्वारा की गई। संस्था साहित्य की विभिन्न विधाओं जैसे कविता, कहानी, लेख, नाटक
+            आदि की रचना, शोध, प्रकाशन एवं प्रचार-प्रसार के माध्यम से साहित्यिक चेतना को विकसित करने के लिए कार्यरत है।
+            साथ ही चित्रकला, संगीत, नृत्य, रंगमंच एवं लोककलाओं सहित कला के विविध रूपों के संरक्षण, संवर्धन एवं उत्थान
+            हेतु निरंतर प्रयास करना इसका प्रमुख उद्देश्य है। संस्था युवा एवं नवोदित प्रतिभाओं को प्रोत्साहित कर उन्हें
+            उनकी योग्यता अनुसार उचित मंच प्रदान करने के लिए प्रतिबद्ध है, ताकि वे अपनी रचनात्मक क्षमता का विकास कर सकें।
+            <br> संस्था सामाजिक चेतना, राष्ट्रीय एकता, सद्भावना एवं सांस्कृतिक मूल्यों को सुदृढ़ करने के उद्देश्य से
+            गोष्ठियों, कार्यशालाओं, कवि सम्मेलनों, प्रदर्शनों, सांस्कृतिक आयोजनों एवं शैक्षणिक शिविरों का आयोजन करती है।
+            इसके अतिरिक्त पत्रिका, पुस्तक, डिजिटल मीडिया एवं अन्य साहित्यिक माध्यमों के द्वारा साहित्य, भाषा, संस्कृति
+            और कला का व्यापक प्रचार-प्रसार करना भी संस्था का उद्देश्य है। विशेष रूप से राजस्थान के विभिन्न अंचलों में
+            बोली जाने वाली क्षेत्रीय भाषाओं एवं लोकसंस्कृति के प्रति जागरूकता फैलाना तथा हमारी सांस्कृतिक, साहित्यिक एवं
+            कलात्मक धरोहरों के संरक्षण और संवर्धन के लिए कार्य करना संस्था की प्राथमिकताओं में शामिल है। <br> साहित्य
+            कला चेतना परिवार साहित्यकारों, कलाकारों, चिंतकों एवं सांस्कृतिक व्यक्तित्वों के मध्य संवाद स्थापित कर
+            विचारों के आदान-प्रदान को बढ़ावा देने का कार्य भी करती है। संस्था कला एवं साहित्य से जुड़ी प्रतिभाओं को
+            आवश्यकतानुसार आर्थिक सहयोग उपलब्ध करवाने तथा उन्हें उपयुक्त अवसर प्रदान करने हेतु प्रयासरत रहती है। </p>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:12px" data-e>Sahitya Kala Chetna Parivar was
+            established in 2010. This organisation works continuously to spread awareness about Hindi language, art,
+            literature and culture. It provides a common platform to new and senior writers from across the country.</p>
+          <p style="color:var(--muted);font-size:14.5px" data-h>संस्था की गतिविधियाँ साहित्यिक गोष्ठियों, कवि सम्मेलनों,
+            पुस्तक विमोचन और प्रतियोगिताओं तक फैली हुई हैं।</p>
+          <p style="color:var(--muted);font-size:14.5px" data-e>Activities span literary seminars, poetry conferences,
+            book launches and competitions across the country.</p>
+          <div class="pill-row">
+            <span class="pill" data-h>📖 साहित्यिक संस्था</span><span class="pill" data-e>📖 Literary
+              Organisation</span>
+            <span class="pill" data-h>🎭 सांस्कृतिक</span><span class="pill" data-e>🎭 Cultural</span>
+            <span class="pill" data-h>🇮🇳 हिंदी प्रेमी</span><span class="pill" data-e>🇮🇳 Hindi Lovers</span>
+            <span class="pill" data-h>✍️ मासिक पत्रिका</span><span class="pill" data-e>✍️ Monthly Magazine</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <!-- <div class="card fi">
+            <h3
+              style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:14px;display:flex;align-items:center;gap:10px">
+              <span class="icon-box">🎯</span><span data-h>संस्था के उद्देश्य</span><span data-e>Our Objectives</span>
+            </h3>
+            <ul class="obj-list">
+              <li><span data-h>हिंदी साहित्य का प्रचार-प्रसार करना</span><span data-e>Promote Hindi literature
+                  widely</span></li>
+              <li><span data-h>नव रचनाकारों को प्रोत्साहन देना</span><span data-e>Encourage new writers</span></li>
+              <li><span data-h>क्षेत्रीय भाषाओं का संरक्षण</span><span data-e>Preserve regional languages</span></li>
+              <li><span data-h>सांस्कृतिक जागरूकता फैलाना</span><span data-e>Spread cultural awareness</span></li>
+              <li><span data-h>साहित्यिक गोष्ठियाँ आयोजित करना</span><span data-e>Organise literary seminars</span></li>
+            </ul>
+          </div> -->
+          <div class="card fi">
+            <h3
+              style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:14px;display:flex;align-items:center;gap:10px">
+              <span class="icon-box">🌟</span><span data-h>संस्था का उद्देश्य</span><span data-e>Key Activities</span>
+            </h3>
+            <p>साहित्य कला चेतना परिवार(पंजीकृत) पूर्ण रूप से विशुद्ध साहित्य,कला, भाषा और संस्कृति हेतु प्रतिबद्ध गैर
+              लाभकारी संस्था है। <br>इस परिवार का उद्देश्य है - </p>
+            <ul class="obj-list">
+              <li><span data-h>हिंदी और क्षैत्रीय भाषा, कला, संस्कृति और साहित्य के सृजन कर्ताओं को एक मंच पर एकत्रित
+                  करना </span><span data-e>Monthly literary magazine</span></li>
+              <li><span data-h>नवोदित सृजन कर्ताओं को प्रोत्साहित कर आगे बढ़ने हेतु मार्गदर्शन, सहयोग प्रदान करना
+                </span><span data-e>Poetry conferences & mushairas</span></li>
+              <li><span data-h>भाषा, कला, संस्कृति और साहित्य के प्रति जागरुकता का प्रसार करना </span><span data-e>Book
+                  release programmes</span></li>
+              <li><span data-h>समय समय पर कलात्मक और साहित्यिक विचार विमर्श, गोष्ठियों का आयोजन कर परस्पर संवाद स्थापित
+                  करना। </span><span data-e>Literary competitions & awards</span></li>
+              <li><span data-h>लोक कलाओं के उत्थान हेतु प्रचार - प्रसार करना। </span><span data-e>Literary competitions
+                  & awards</span></li>
+              <li><span data-h>नवोदित कलाकारों को प्रेरित कर योग्यता अनुसार मंच उपलब्ध कराना। </span><span
+                  data-e>Literary competitions & awards</span></li>
+              <li><span data-h>क्षैत्रीय भाषा से तात्पर्य विशेष राजस्थान के विभिन्न अंचल में बोली जानी वाली भाषाओं के
+                  प्रति जागरूकता का प्रसार करना। </span><span data-e>Literary competitions & awards</span></li>
+              </span><span data-e>Literary competitions & awards</span></li>
+              <li><span data-h>हमारी सांस्कृतिक, साहित्य, कलात्मक धरोहरों के संरक्षण, उत्थान हेतु प्रचार - प्रसार करना।
+                </span><span data-e>Literary competitions & awards</span></li>
+              <li><span data-h> सांस्कृतिक, साहित्य, कलात्मक विचारों, व्यक्तित्वों के मध्य संवाद स्थापित कर उन विचारों
+                  का आदान-प्रदान करना। </span><span data-e>Literary competitions & awards</span></li>
+              <li><span data-h> 10. समय - समय पर भाषा, संस्कृति, साहित्य और कला शिविरों शैक्षणिक संस्थानों में आयोजन कर
+                  प्रचार प्रसार करना अथवा सहयोग करवाना। </span><span data-e>Literary competitions & awards</span></li>
+              <li><span data-h> 11. कला, साहित्य प्रतिभाओं को आर्थिक सहायता उपलब्ध करवाने हेतु प्रयास करना एवं उपयुक्त
+                  मंचीय अवसर उपलब्ध करवाना।</span><span data-e>Literary competitions & awards</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MAGAZINE -->
+  <section id="magazine" class="sec">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <div class="eyebrow" data-h>पत्रिका</div>
+        <div class="eyebrow" data-e>Magazine</div>
+        <h2 data-h>उपल पत्रिका</h2>
+        <h2 data-e>Upal Patrika</h2>
+        <p data-h>हिंदी साहित्य को समर्पित मासिक पत्रिका</p>
+        <p data-e>A monthly magazine dedicated to Hindi literature</p>
+        <div class="rule"></div>
+      </div>
+      <div class="mag-grid">
+        <div class="card fi">
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:14px"
+            data-h>पत्रिका का परिचय</h3>
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:14px"
+            data-e>About the Magazine</h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:12px" data-h>उपल साहित्यिक पत्रिका का उद्देश्य
+            साहित्य, संस्कृति, कला एवं सामाजिक चेतना को सृजनात्मक अभिव्यक्ति प्रदान करना तथा साहित्यिक मूल्यों के
+            संरक्षण एवं संवर्धन हेतु एक सशक्त मंच उपलब्ध करवाना है। इसका प्रकाशन साहित्य कला चेतना परिवार द्वारा किया
+            जाता है।पत्रिका कविता, कहानी, लेख, नाटक, लघुकथा, समीक्षा, शोध आलेख, संस्मरण एवं अन्य साहित्यिक विधाओं के
+            माध्यम से रचनात्मक लेखन को प्रोत्साहित करती है तथा नवोदित एवं स्थापित साहित्यकारों को अपनी अभिव्यक्ति के लिए
+            समान अवसर प्रदान करने का कार्य करती है। <br> पत्रिका का उद्देश्य हिंदी सहित राजस्थान की क्षेत्रीय भाषाओं एवं
+            लोकभाषाओं के साहित्य, लोकसंस्कृति और लोककलाओं का प्रचार-प्रसार करना तथा नई पीढ़ी को अपनी सांस्कृतिक जड़ों से
+            जोड़ना है। उपल साहित्यिक पत्रिका साहित्य, कला और संस्कृति से जुड़े रचनाकारों, विचारकों एवं पाठकों के मध्य
+            संवाद स्थापित कर सकारात्मक एवं सृजनशील विचारधारा को आगे बढ़ाने के लिए प्रतिबद्ध है। <br> यह पत्रिका सामाजिक
+            चेतना, राष्ट्रीय एकता, मानवीय संवेदनाओं, सद्भावना एवं सांस्कृतिक मूल्यों को सुदृढ़ करने के उद्देश्य से
+            साहित्यिक सामग्री का प्रकाशन करती है। साथ ही शिक्षा, पर्यावरण, महिला सशक्तिकरण, लोकसंस्कृति संरक्षण एवं
+            सामाजिक सरोकारों से जुड़े विषयों को साहित्य के माध्यम से जन-जन तक पहुँचाने का प्रयास करती है। <br> उपल
+            साहित्यिक पत्रिका का उद्देश्य डिजिटल एवं मुद्रित माध्यमों द्वारा साहित्य को व्यापक स्तर पर पहुँचाना, युवा
+            प्रतिभाओं को मंच देना तथा साहित्यिक गतिविधियों, गोष्ठियों, कवि सम्मेलनों, कार्यशालाओं एवं सांस्कृतिक आयोजनों
+            के माध्यम से समाज में साहित्य एवं कला के प्रति जागरूकता उत्पन्न करना भी है। <br> इस पत्रिका का संचालन नोहर,
+            जिला हनुमानगढ़ ( राजस्थान ) में स्थित साहित्य, कला, संस्कृति एवं सामाजिक चेतना के क्षेत्र में रचनात्मक
+            वातावरण का निर्माण करते हुए समाज में सकारात्मक विचारों का प्रसार करने के उद्देश्य से स्थापित संस्था साहित्य
+            कला चेतना परिवार द्वारा द्वैमासिक रूप में किया जाता है जिसका संस्था संस्थापक संपादन कमल अग्रवाल द्वारा किया
+            जाता है। </p>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:12px" data-e>Upal Patrika is a monthly literary
+            magazine publishing outstanding works in poetry, stories, short fiction, reviews, essays and satire across
+            diverse genres.</p>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:16px" data-h>प्रत्येक अंक में एक विशेष स्तम्भ नव
+            प्रतिभाओं को समर्पित होता है।</p>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:16px" data-e>Each issue has a special column
+            dedicated to emerging talent from across India.</p>
+          <div>
+            <span class="badge">📋 ISSN: 2XXX-XXXX</span>
+            <span class="badge">📌 RNI: MPHIN/2010/XXXXX</span>
+            <span class="badge" data-h>🗓 मासिक प्रकाशन</span><span class="badge" data-e>🗓 Monthly Publication</span>
+          </div>
+        </div>
+        <div class="card fi">
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:18px"
+            data-h>संपादकीय मंडल</h3>
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:18px"
+            data-e>Editorial Board</h3>
+          <div class="editor-row">
+            <div class="av">✍️</div>
+            <div>
+              <div class="av-name" data-h>डॉ. रमेश कुमार शर्मा</div>
+              <div class="av-name" data-e>Dr. Ramesh Kumar Sharma</div>
+              <div class="av-role" data-h>प्रधान संपादक</div>
+              <div class="av-role" data-e>Chief Editor</div>
+            </div>
+          </div>
+          <div class="editor-row">
+            <div class="av">📝</div>
+            <div>
+              <div class="av-name" data-h>श्रीमती सुनीता पाठक</div>
+              <div class="av-name" data-e>Smt. Sunita Pathak</div>
+              <div class="av-role" data-h>संपादक</div>
+              <div class="av-role" data-e>Editor</div>
+            </div>
+          </div>
+          <div class="editor-row">
+            <div class="av">📖</div>
+            <div>
+              <div class="av-name" data-h>श्री अमित तिवारी</div>
+              <div class="av-name" data-e>Sh. Amit Tiwari</div>
+              <div class="av-role" data-h>सहायक संपादक</div>
+              <div class="av-role" data-e>Assistant Editor</div>
+            </div>
+          </div>
+          <div class="editor-row">
+            <div class="av">🖼️</div>
+            <div>
+              <div class="av-name" data-h>सुश्री प्रिया वर्मा</div>
+              <div class="av-name" data-e>Ms. Priya Verma</div>
+              <div class="av-role" data-h>कला संपादक</div>
+              <div class="av-role" data-e>Art Editor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sec-hd fi" style="margin-top:60px;margin-bottom:24px">
+        <h2 data-h>प्रकाशित अंकों की सूची</h2>
+        <h2 data-e>Published Issues</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="issues-grid">
+        <a class="iss-card fi" href="https://issuu.com/search?q=hindi+kavita" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ५०" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ५०</div>
+              <div class="iss-vol" data-e>Issue 50</div>
+              <div class="iss-yr" data-h>अगस्त २०२५</div>
+              <div class="iss-yr" data-e>August 2025</div>
+            </div>
+            <div class="iss-new" data-h>नव</div>
+            <div class="iss-new" data-e>New</div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>प्रेम काव्य विशेषांक</div>
+            <div class="iss-title" data-e>Love Poetry Special</div>
+            <div class="iss-meta" data-h>४८ रचनाएँ · ७२ पृष्ठ</div>
+            <div class="iss-meta" data-e>48 works · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+        <a class="iss-card fi" href="https://issuu.com/search?q=prakriti+sahitya" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ४९" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ४९</div>
+              <div class="iss-vol" data-e>Issue 49</div>
+              <div class="iss-yr" data-h>जुलाई २०२५</div>
+              <div class="iss-yr" data-e>July 2025</div>
+            </div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>प्रकृति एवं पर्यावरण</div>
+            <div class="iss-title" data-e>Nature & Environment</div>
+            <div class="iss-meta" data-h>४२ रचनाएँ · ६८ पृष्ठ</div>
+            <div class="iss-meta" data-e>42 works · 68 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+        <a class="iss-card fi" href="https://issuu.com/search?q=mahila+rachnakar" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ४८" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ४८</div>
+              <div class="iss-vol" data-e>Issue 48</div>
+              <div class="iss-yr" data-h>जून २०२५</div>
+              <div class="iss-yr" data-e>June 2025</div>
+            </div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>महिला रचनाकार विशेषांक</div>
+            <div class="iss-title" data-e>Women Writers Special</div>
+            <div class="iss-meta" data-h>५२ रचनाएँ · ८० पृष्ठ</div>
+            <div class="iss-meta" data-e>52 works · 80 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+        <a class="iss-card fi" href="https://issuu.com/search?q=yuva+lekhan" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ४७" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ४७</div>
+              <div class="iss-vol" data-e>Issue 47</div>
+              <div class="iss-yr" data-h>मई २०२५</div>
+              <div class="iss-yr" data-e>May 2025</div>
+            </div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>युवा लेखन विशेष</div>
+            <div class="iss-title" data-e>Youth Writing Special</div>
+            <div class="iss-meta" data-h>३८ रचनाएँ · ६४ पृष्ठ</div>
+            <div class="iss-meta" data-e>38 works · 64 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+        <a class="iss-card fi" href="https://issuu.com/search?q=holi+poetry" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ४६" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ४६</div>
+              <div class="iss-vol" data-e>Issue 46</div>
+              <div class="iss-yr" data-h>अप्रैल २०२५</div>
+              <div class="iss-yr" data-e>April 2025</div>
+            </div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>होली विशेषांक</div>
+            <div class="iss-title" data-e>Holi Special Issue</div>
+            <div class="iss-meta" data-h>४५ रचनाएँ · ७० पृष्ठ</div>
+            <div class="iss-meta" data-e>45 works · 70 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+        <a class="iss-card fi" href="https://issuu.com/search?q=laghukatha+hindi" target="_blank" rel="noopener">
+          <div class="iss-cover">
+            <img src="https://images.unsplash.com/photo-1474932430478-367dbb6832c1?w=400&h=300&fit=crop&auto=format"
+              alt="अंक ४५" loading="lazy">
+            <div class="iss-overlay">
+              <div class="iss-vol" data-h>अंक ४५</div>
+              <div class="iss-vol" data-e>Issue 45</div>
+              <div class="iss-yr" data-h>मार्च २०२५</div>
+              <div class="iss-yr" data-e>March 2025</div>
+            </div>
+          </div>
+          <div class="iss-body">
+            <div class="iss-title" data-h>लघुकथा विशेष</div>
+            <div class="iss-title" data-e>Short Story Special</div>
+            <div class="iss-meta" data-h>३६ रचनाएँ · ६० पृष्ठ</div>
+            <div class="iss-meta" data-e>36 works · 60 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </a>
+      </div> -->
+    </div>
+  </section>
+  <!-- E-MAGAZINE -->
+  <section id="emag" class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <div class="eyebrow" data-h>डिजिटल संस्करण</div>
+        <div class="eyebrow" data-e>Digital Edition</div>
+        <h2 data-h>ई-पत्रिका</h2>
+        <h2 data-e>E-Magazine</h2>
+        <!-- <p data-h>सभी अंक निःशुल्क PDF में डाउनलोड करें</p>
+        <p data-e>Download all issues as free PDF</p> -->
+        <div class="rule"></div>
+      </div>
+      <div class="emag-grid">
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/1.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/2.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/3.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/4.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/5.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/6.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/7.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+        <div class="emag-card fi">
+          <div class="emag-img"><img
+              src="assets/img/9.jpeg"
+              alt="अगस्त २०२५" loading="lazy"></div>
+          <div class="emag-body">
+            <div class="emag-title" data-h>अगस्त अंक २०२५</div>
+            <div class="emag-title" data-e>August Issue 2025</div>
+            <div class="emag-sub" data-h>प्रेम काव्य विशेषांक · ७२ पृष्ठ</div>
+            <div class="emag-sub" data-e>Love Poetry Special · 72 pages</div>
+            <div class="iss-view" data-h>पढ़ें <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+            <div class="iss-view" data-e>View <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- RACHNA -->
+  <section id="rachna" class="sec">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <div class="eyebrow" data-h>रचनाकारों के लिए</div>
+        <div class="eyebrow" data-e>For Writers</div>
+        <h2 data-h>रचना आमंत्रण</h2>
+        <h2 data-e>Submit Your Work</h2>
+        <p data-h>उपल पत्रिका में प्रकाशन हेतु अपनी रचनाएँ भेजें</p>
+        <p data-e>Send your works for publication in Upal Patrika</p>
+        <div class="rule"></div>
+      </div>
+      <div class="rachna-grid">
+        <div class="card fi">
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:20px"
+            data-h>📜 रचना भेजने के नियम</h3>
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:20px"
+            data-e>📜 Submission Guidelines</h3>
+          <div class="rule-item">
+            <div class="rnum">१</div>
+            <p data-h>रचना मौलिक एवं अप्रकाशित होनी चाहिए। पूर्व प्रकाशित रचनाएँ स्वीकार नहीं होंगी।</p>
+            <p data-e>Work must be original and unpublished. Previously published works will not be accepted.</p>
+          </div>
+          <div class="rule-item">
+            <div class="rnum">२</div>
+            <p data-h>रचना यूनिकोड फॉण्ट में टाइप करके ईमेल या व्हाट्सएप पर भेजें।</p>
+            <p data-e>Send works typed in Unicode font via email or WhatsApp.</p>
+          </div>
+          <div class="rule-item">
+            <div class="rnum">३</div>
+            <p data-h>रचना के साथ अपना नाम, पता, मोबाइल नंबर और फोटो अवश्य भेजें।</p>
+            <p data-e>Send your name, address, mobile number and photo along with the work.</p>
+          </div>
+          <div class="rule-item">
+            <div class="rnum">४</div>
+            <p data-h>शब्द सीमा: कविता — ३०-४० पंक्तियाँ, कहानी — १०००-२००० शब्द, लेख — ८००-१५०० शब्द।</p>
+            <p data-e>Limit: Poetry 30-40 lines, Story 1000-2000 words, Essay 800-1500 words.</p>
+          </div>
+          <div class="rule-item">
+            <div class="rnum">५</div>
+            <p data-h>प्रतिमाह १५ तारीख तक प्राप्त रचनाएँ अगले अंक में विचार के लिए ली जाएंगी।</p>
+            <p data-e>Works received by 15th each month will be considered for the next issue.</p>
+          </div>
+          <div class="rule-item">
+            <div class="rnum">६</div>
+            <p data-h>प्रकाशन का निर्णय संपादक मंडल का अंतिम होगा।</p>
+            <p data-e>The editorial board's decision on publication will be final.</p>
+          </div>
+        </div>
+        <div class="fi">
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:18px"
+            data-h>📮 रचना कैसे भेजें</h3>
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:18px"
+            data-e>📮 How to Submit</h3>
+          <a class="citem" href="mailto:upalpatrika@gmail.com">
+            <div class="citem-ico" style="background:rgba(93,5,4,0.07)">📧</div>
+            <div>
+              <div class="citem-lbl" data-h>ईमेल पर भेजें</div>
+              <div class="citem-lbl" data-e>Send via Email</div>
+              <div class="citem-val">upalpatrika@gmail.com</div>
+            </div>
+          </a>
+          <a class="citem" href="https://wa.me/919876543210" target="_blank" rel="noopener">
+            <div class="citem-ico" style="background:rgba(37,211,102,0.10)">💬</div>
+            <div>
+              <div class="citem-lbl" data-h>व्हाट्सएप पर भेजें</div>
+              <div class="citem-lbl" data-e>Send via WhatsApp</div>
+              <div class="citem-val">+91 98765 43210</div>
+            </div>
+          </a>
+          <div class="card" style="margin-top:6px;padding:18px 20px">
+            <p style="font-size:13.5px;color:var(--muted)" data-h>💡 <strong>सुझाव:</strong> रचना Word (.docx) या PDF
+              फाइल में भेजें। Subject में लिखें: <em>"उपल पत्रिका — रचना प्रेषण"</em></p>
+            <p style="font-size:13.5px;color:var(--muted)" data-e>💡 <strong>Tip:</strong> Send as Word (.docx) or PDF.
+              Subject: <em>"Upal Patrika — Work Submission"</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT — no form, SVG social icons -->
+  <section id="contact" class="sec sec-alt">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <div class="eyebrow" data-h>संपर्क करें</div>
+        <div class="eyebrow" data-e>Contact Us</div>
+        <h2 data-h>हमसे जुड़ें</h2>
+        <h2 data-e>Get in Touch</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="contact-wrap">
+        <div class="card fi">
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:22px"
+            data-h>संपर्क जानकारी</h3>
+          <h3 style="font-family:'Noto Serif Devanagari',serif;font-size:19px;color:var(--deep);margin-bottom:22px"
+            data-e>Contact Information</h3>
+          <div class="info-block">
+            <div class="info-ico">📍</div>
+            <div>
+              <div class="info-lbl" data-h>पता</div>
+              <div class="info-lbl" data-e>Address</div>
+              <div class="info-val" data-h>साहित्य कला चेतना परिवार<br>मुख्य बाज़ार, सिविल लाइंस<br>जबलपुर, मध्यप्रदेश —
+                ४८२००१</div>
+              <div class="info-val" data-e>Sahitya Kala Chetna Parivar<br>Main Bazaar, Civil Lines<br>Jabalpur, MP —
+                482001</div>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-ico">📱</div>
+            <div>
+              <div class="info-lbl" data-h>मोबाइल</div>
+              <div class="info-lbl" data-e>Mobile</div>
+              <div class="info-val"><a href="tel:+919876543210" style="color:inherit;text-decoration:none">+91 98765
+                  43210</a></div>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-ico">📧</div>
+            <div>
+              <div class="info-lbl" data-h>ईमेल</div>
+              <div class="info-lbl" data-e>Email</div>
+              <div class="info-val"><a href="mailto:upalpatrika@gmail.com"
+                  style="color:var(--deep)">upalpatrika@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="info-block" style="margin-bottom:0">
+            <div>
+              <div class="info-lbl" style="margin-bottom:10px" data-h>सोशल मीडिया</div>
+              <div class="info-lbl" style="margin-bottom:10px" data-e>Social Media</div>
+              <div class="soc-icons">
+                <a class="soc-icon" href="https://facebook.com" target="_blank" rel="noopener" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a class="soc-icon" href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <defs>
+                      <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#f09433" />
+                        <stop offset="50%" stop-color="#dc2743" />
+                        <stop offset="100%" stop-color="#bc1888" />
+                      </linearGradient>
+                    </defs>
+                    <path fill="url(#ig)"
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a class="soc-icon" href="https://youtube.com" target="_blank" rel="noopener" title="YouTube">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#ff0000">
+                    <path
+                      d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <!-- <a class="brand" href="#home" style="display:inline-flex">
+          <div class="brand-orb" style="width:40px;height:40px;font-size:17px">उ</div>
+          <div class="brand-txt" style="margin-left:10px">
+            <div class="b-name" data-h>उपल पत्रिका</div>
+            <div class="b-name" data-e>Upal Patrika</div>
+            <div class="b-sub" data-h>साहित्य कला चेतना परिवार</div>
+            <div class="b-sub" data-e>Sahitya Kala Chetna Parivar</div>
+          </div>
+        </a> -->
+        <p data-h>भाषा, कला, साहित्य और संस्कृति जागरूकता हेतु प्रतिबद्ध। हिंदी साहित्य की एक समर्पित मासिक पत्रिका।</p>
+        <p data-e>Committed to awareness of language, art, literature and culture. A dedicated monthly Hindi literary
+          magazine.</p>
+        <div class="foot-soc">
+          <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook"><svg width="16" height="16"
+              viewBox="0 0 24 24" fill="white">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><svg width="16" height="16"
+              viewBox="0 0 24 24" fill="white">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"><svg width="16" height="16"
+              viewBox="0 0 24 24" fill="white">
+              <path
+                d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+            </svg></a>
+          <a href="https://t.me" target="_blank" rel="noopener" title="Telegram"><svg width="16" height="16"
+              viewBox="0 0 24 24" fill="white">
+              <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            </svg></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" title="X"><svg width="16" height="16"
+              viewBox="0 0 24 24" fill="white">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+            </svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-h>त्वरित लिंक</h4>
+        <h4 data-e>Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-h>मुख्य पृष्ठ</a><a href="#home" data-e>Home</a></li>
+          <li><a href="#about" data-h>हमारे बारे में</a><a href="#about" data-e>About Us</a></li>
+          <li><a href="#magazine" data-h>उपल पत्रिका</a><a href="#magazine" data-e>Magazine</a></li>
+          <li><a href="#emag" data-h>ई-पत्रिका</a><a href="#emag" data-e>E-Magazine</a></li>
+          <li><a href="#rachna" data-h>रचना आमंत्रण</a><a href="#rachna" data-e>Submit Work</a></li>
+          <li><a href="#contact" data-h>संपर्क</a><a href="#contact" data-e>Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-h>संपर्क</h4>
+        <h4 data-e>Contact</h4>
+        <ul>
+          <li><a href="mailto:upalpatrika@gmail.com">📧 upalpatrika@gmail.com</a></li>
+          <li><a href="tel:+919876543210">📱 +91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank">💬 WhatsApp</a></li>
+          <li><a href="#" data-h>📍 जबलपुर, मध्यप्रदेश</a><a href="#" data-e>📍 Jabalpur, MP</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-h>© २०२५ उपल पत्रिका — साहित्य कला चेतना परिवार। सर्वाधिकार सुरक्षित।</span>
+      <span data-e>© 2025 Upal Patrika — Sahitya Kala Chetna Parivar. All rights reserved.</span>
+    </div>
+  </footer>
+  <div class="toast" id="toastEl"></div>
+  <script>
+    // TICKER — seamless double-copy trick
+    (function () {
+      var textH = '🎉 नवीन अंक — अगस्त २०२५ अब उपलब्ध! \u2003❖\u2003 रचनाएँ भेजें: upalpatrika@gmail.com \u2003❖\u2003 प्रतिमाह १५ तारीख तक रचनाएँ स्वीकार की जाती हैं \u2003❖\u2003 विशेषांक: युवा लेखन — सितंबर २०२५ \u2003❖\u2003 ';
+      var textE = '🎉 New Issue — August 2025 now available! \u2003❖\u2003 Submit: upalpatrika@gmail.com \u2003❖\u2003 Submissions accepted until 15th each month \u2003❖\u2003 Special Issue: Youth Writing — September 2025 \u2003❖\u2003 ';
+      function build(lang) {
+        var t = lang === 'en' ? textE : textH;
+        var track = document.getElementById('tickerTrack');
+        track.innerHTML = '<span class="ticker-seg">' + t + '</span><span class="ticker-seg">' + t + '</span>';
+      }
+      build('hi');
+      window._buildTicker = build;
+    })();
+
+    // LANGUAGE
+    function setLang(l) {
+      document.body.className = l;
+      document.getElementById('btn-hi').className = 'lbtn' + (l === 'hi' ? ' on' : '');
+      document.getElementById('btn-en').className = 'lbtn' + (l === 'en' ? ' on' : '');
+      window._buildTicker(l);
+      try { localStorage.setItem('ul', l) } catch (e) { }
+    }
+    try { var s = localStorage.getItem('ul'); if (s) setLang(s) } catch (e) { }
+
+    // HAMBURGER
+    function toggleMob() {
+      var n = document.getElementById('mobnav');
+      var h = document.getElementById('ham');
+      var open = !n.classList.contains('open');
+      n.classList.toggle('open', open);
+      h.classList.toggle('open', open);
+    }
+    function closeMob() {
+      document.getElementById('mobnav').classList.remove('open');
+      document.getElementById('ham').classList.remove('open');
+    }
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('header')) closeMob();
+    });
+
+    // TOAST
+    var tt;
+    function toast(msg) {
+      var el = document.getElementById('toastEl');
+      el.textContent = msg; el.classList.add('on');
+      clearTimeout(tt); tt = setTimeout(function () { el.classList.remove('on') }, 3000);
+    }
+
+    // SCROLL FADE-IN
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('vis') });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el) });
+
+    // ACTIVE NAV
+    var secs = Array.from(document.querySelectorAll('section[id]'));
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY + 80, cur = '';
+      secs.forEach(function (s) { if (y >= s.offsetTop) cur = s.id });
+      document.querySelectorAll('nav a').forEach(function (a) {
+        a.classList.toggle('cur', a.getAttribute('href') === '#' + cur);
+      });
+    }, { passive: true });
+  </script>
+</body>
+
+</html>

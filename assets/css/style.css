@@ -1023,11 +1023,20 @@ body.en [data-h] {
 body.hi [data-e] {
     display: none !important
 }
-
-/* [data-e] {
-    display: block
-} */
-
+footer .brand-txt img {
+    filter: invert(.9);
+}
+.readmore {
+    color: var(--gold-lt);
+    background: var(--deep);
+    padding: 7px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all .25s ease;
+    white-space: nowrap;
+    line-height: 1.4em;
+}
 /* RESPONSIVE */
 @media(max-width:900px) {
 

@@ -73,9 +73,11 @@ header {
     background: var(--gold);
     box-shadow: 0 2px 16px var(--shadow);
 }
+
 .brand-txt img {
     height: 60px;
 }
+
 .nav-wrap {
     max-width: 1120px;
     margin: 0 auto;
@@ -130,7 +132,7 @@ nav ul a {
 nav ul a:hover,
 nav ul a.cur {
     color: var(--gold-lt);
-    background:var(--deep);
+    background: var(--deep);
 }
 
 .ham {
@@ -1023,9 +1025,11 @@ body.en [data-h] {
 body.hi [data-e] {
     display: none !important
 }
+
 footer .brand-txt img {
     filter: invert(.9);
 }
+
 .readmore {
     color: var(--gold-lt);
     background: var(--deep);
@@ -1037,6 +1041,97 @@ footer .brand-txt img {
     white-space: nowrap;
     line-height: 1.4em;
 }
+
+.emag-card.fi.vis {
+    position: relative;
+}
+
+a.iss-view-new[data-e] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block !important;
+}
+
+.gallery-carousel .item,
+.media-carousel .item {
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 230px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+}
+
+.gallery-carousel .item img,
+.media-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s;
+}
+
+.gallery-carousel .item:hover img,
+.media-carousel .item:hover img {
+    transform: scale(1.08)
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    background: var(--deep, #5d0504) !important;
+    color: #fff !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    line-height: 36px !important;
+    font-size: 20px !important;
+    opacity: .9;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background: var(--deep, #5d0504) !important
+}
+
+.gallery-slider .item,
+.media-slider .item {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 230px;
+    /* box-shadow: 0 4px 14px rgba(0, 0, 0, .12); */
+    background: #fff;
+}
+
+.gallery-slider .item img,
+.media-slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.media-slider .item img{
+    object-fit: contain;
+}
+.owl-theme .owl-nav [class*=owl-] {
+    background: var(--deep, #5d0504) !important;
+    color: #fff !important;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    line-height: 36px !important;
+    font-size: 20px !important;
+    opacity: .9;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background: var(--deep, #5d0504) !important
+}
+
+.glightbox-clean .gprev,
+.glightbox-clean .gnext {
+    top: 45% !important;
+}
+
 /* RESPONSIVE */
 @media(max-width:900px) {
 

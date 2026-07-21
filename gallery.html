@@ -1,0 +1,350 @@
+ <!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>उपल पत्रिका | Upal Patrika</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+
+<body class="hi">
+  <div class="langbar">
+    <span>भाषा / Language:</span>
+    <button class="lbtn on" id="btn-hi" onclick="setLang('hi')">हिन्दी</button>
+    <button class="lbtn" id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <div class="brand-txt">
+          <img src="assets/img/logo.png" alt="">
+          <!-- <div class="b-sub" data-h>साहित्य कला चेतना परिवार</div>
+          <div class="b-sub" data-e>Sahitya Kala Chetna Parivar</div> -->
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-h> मुख्य पटल </a><a href="index.html" data-e>Home</a></li>
+          <li><a target="_blank" href="assets/img/about-organisation.jpeg" data-h>हमारे बारे में</a><a target="_blank" href="assets/img/about-organisation.jpeg" data-e>About us</a></li>
+          <li><a href="editorial-board.html" data-h>संपादकीय मंडल</a><a href="editorial-board.html" data-e>Editorial Board</a></li>
+          <li><a href="gallery.html" data-h>फोटो गैलरी</a><a href="gallery.html" data-e>Photo Gallery</a></li>
+          <li><a href="media.html" data-h>मीडिया समाचार</a><a href="media.html" data-e>Media News</a></li>
+          <li><a href="contact.html" data-h>संपर्क करें</a><a href="contact.html" data-e>Contact us</a></li>
+        </ul>
+      </nav>
+      <button class="ham" id="ham" onclick="toggleMob()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mob-nav" id="mobnav">
+      <a href="index.html" onclick="closeMob()" data-h> मुख्य पटल </a><a href="index.html" onclick="closeMob()" data-e> Home</a>
+      <a href="assets/img/about-organisation.jpeg" onclick="closeMob()" data-h> हमारे बारे में</a><a href="assets/img/about-organisation.jpeg" onclick="closeMob()" data-e>
+        About us</a>
+      <a href="editorial-board.html" onclick="closeMob()" data-h>संपादकीय मंडल</a><a href="editorial-board.html" onclick="closeMob()"
+        data-e>Editorial Board</a>
+      <a href="gallery.html" onclick="closeMob()" data-h> फोटो गैलरी</a><a href="gallery.html" onclick="closeMob()" data-e>
+        Photo Gallery</a>
+      <a href="media.html" onclick="closeMob()" data-h> मीडिया समाचार</a><a href="media.html" onclick="closeMob()" data-e>
+        Media News</a>
+      <a href="contact.html" onclick="closeMob()" data-h> संपर्क करें</a><a href="contact.html" onclick="closeMob()" data-e>Contact us</a>
+      
+    </div>
+  </header>
+
+<section id="gallery" class="sec">
+    <div class="wrap">
+      <div class="sec-hd fi">
+        <h2 data-h>फोटो गैलरी</h2>
+        <h2 data-e>Photo Gallery</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="owl-carousel owl-theme gallery-slider">
+        <div class="item"><a href="assets/img/gallery-1.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-1.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-2.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-2.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-3.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-3.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-4.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-4.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-5.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-5.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-6.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-6.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-7.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-7.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-8.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-8.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-9.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-9.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-10.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-10.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-11.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-11.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-12.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-12.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-13.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-13.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-14.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-14.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-15.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-15.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-16.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-16.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-17.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-17.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-18.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-18.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-19.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-19.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-20.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-20.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-21.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-21.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-22.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-22.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-23.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-23.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-24.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-24.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-25.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-25.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-26.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-26.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-27.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-27.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-28.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-28.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-29.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-29.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-30.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-30.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-31.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-31.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-32.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-32.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-33.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-33.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-34.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-34.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-35.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-35.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-36.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-36.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-37.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-37.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-38.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-38.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-39.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-39.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-40.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-40.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-41.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-41.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-42.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-42.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-43.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-43.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-44.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-44.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-45.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-45.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-46.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-46.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-47.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-47.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-48.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-48.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-49.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-49.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-50.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-50.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-51.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-51.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-52.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-52.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-53.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-53.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-54.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-54.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-55.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-55.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-56.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-56.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-57.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-57.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-58.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-58.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-59.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-59.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-60.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-60.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-61.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-61.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-62.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-62.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-63.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-63.jpeg" loading="lazy"></a></div>
+        <div class="item"><a href="assets/img/gallery-64.jpeg" class="glightbox" data-gallery="gallery"><img
+              src="assets/img/gallery-64.jpeg" loading="lazy"></a></div>
+      </div>
+    </div>
+  </section>
+   <!-- Lightbox Popup -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <div class="owl-carousel owl-theme lightbox-carousel" id="lightboxCarousel"></div>
+  </div>
+
+
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+      
+        <!-- <a class="brand" href="#home">
+          <div class="brand-txt">
+            <img src="assets/img/logo.png" alt="">
+          </div>
+        </a> -->
+        <p data-h>भाषा, कला, साहित्य और संस्कृति जागरूकता हेतु प्रतिबद्ध। <br> हिंदी साहित्य की एक समर्पित मासिक
+          पत्रिका।</p>
+        <p data-e>Committed to awareness of language, art, literature and culture. A dedicated monthly Hindi literary
+          magazine.</p>
+      </div>
+      <div>
+        <h4 data-h>त्वरित लिंक</h4>
+        <h4 data-e>Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-h> मुख्य पटल </a><a href="index.html" data-e>Home</a></li>
+          <li><a target="_blank" href="assets/img/about-organisation.jpeg" data-h>हमारे बारे में</a><a target="_blank" href="assets/img/about-organisation.jpeg" data-e>About us</a></li>
+          <li><a href="editorial-board.html" data-h>संपादकीय मंडल</a><a href="editorial-board.html" data-e>Editorial Board</a></li>
+          <li><a href="gallery.html" data-h>फोटो गैलरी</a><a href="gallery.html" data-e>Photo Gallery</a></li>
+          <li><a href="media.html" data-h>मीडिया समाचार</a><a href="media.html" data-e>Media News</a></li>
+          <li><a href="contact.html" data-h>संपर्क करें</a><a href="contact.html" data-e>Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-h>संपर्क</h4>
+        <h4 data-e>Contact</h4>
+        <ul>
+          <li><a href="mailto:upalpatrika@gmail.com">📧 upalpatrika@gmail.com</a></li>
+          <li><a href="tel:+919876543210">📱 +91 9352851549</a></li>
+          <li><a href="#" data-h>📍  आई.सी.आई.सी.आई. बैंक के पास, <br>
+              सिनेमा हॉल रोड, नोहर, जिला - हनुमानगढ़ <br> पिन कोड - 335523  राजस्थान</a><a href="#" data-e>📍
+              Near ICICI Bank,
+              Cinema Hall Road,
+              Nohar, District Hanumangarh,
+              Rajasthan – 335523, India.</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-h>© २०२५ उपल पत्रिका — साहित्य कला चेतना परिवार। सर्वाधिकार सुरक्षित।</span>
+      <span data-e>© 2025 Upal Patrika — Sahitya Kala Chetna Parivar. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toastEl"></div>
+  <!-- jQuery + Owl Carousel JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+
+    // LANGUAGE
+    function setLang(l) {
+      document.body.className = l;
+      document.getElementById('btn-hi').className = 'lbtn' + (l === 'hi' ? ' on' : '');
+      document.getElementById('btn-en').className = 'lbtn' + (l === 'en' ? ' on' : '');
+      window._buildTicker(l);
+      try { localStorage.setItem('ul', l) } catch (e) { }
+    }
+    try { var s = localStorage.getItem('ul'); if (s) setLang(s) } catch (e) { }
+
+    // HAMBURGER
+    function toggleMob() {
+      var n = document.getElementById('mobnav');
+      var h = document.getElementById('ham');
+      var open = !n.classList.contains('open');
+      n.classList.toggle('open', open);
+      h.classList.toggle('open', open);
+    }
+    function closeMob() {
+      document.getElementById('mobnav').classList.remove('open');
+      document.getElementById('ham').classList.remove('open');
+    }
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('header')) closeMob();
+    });
+
+    // TOAST
+    var tt;
+    function toast(msg) {
+      var el = document.getElementById('toastEl');
+      el.textContent = msg; el.classList.add('on');
+      clearTimeout(tt); tt = setTimeout(function () { el.classList.remove('on') }, 3000);
+    }
+
+    // SCROLL FADE-IN
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('vis') });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el) });
+
+    // ACTIVE NAV
+    var secs = Array.from(document.querySelectorAll('section[id]'));
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY + 80, cur = '';
+      secs.forEach(function (s) { if (y >= s.offsetTop) cur = s.id });
+      document.querySelectorAll('nav a').forEach(function (a) {
+        a.classList.toggle('cur', a.getAttribute('href') === '#' + cur);
+      });
+    }, { passive: true });
+  </script>
+  <script>
+    $('.gallery-slider').owlCarousel({
+      loop: false,
+      margin: 20,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 4 }
+      }
+    });
+
+    $('.media-slider').owlCarousel({
+      loop: false,
+      margin: 20,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 4 }
+      }
+    });
+
+    GLightbox({
+      selector: '.glightbox',
+      loop: true
+    });
+  </script>
+</body>
+
+</html>

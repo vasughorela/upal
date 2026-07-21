@@ -70,7 +70,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 200;
-    background:#fff;
+    background: var(--gold);
     box-shadow: 0 2px 16px var(--shadow);
 }
 
@@ -149,10 +149,10 @@ nav ul a.cur {
     display: block;
     width: 22px;
     height: 2px;
-    background: #3a0202;
+    background: #fff;
     border-radius: 2px;
     transition: all .35s cubic-bezier(.4, 0, .2, 1);
-    transform-origin: center;
+    transform-origin: center
 }
 
 .ham.open span:nth-child(1) {
@@ -200,6 +200,128 @@ nav ul a.cur {
     padding-left: 28px
 }
 
+.mob-book-btn {
+    display: none;
+    margin: 12px 20px 16px;
+    background: var(--gold);
+    color: var(--deep);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background .2s
+}
+
+.mob-book-btn:hover {
+    background: var(--gold-lt)
+}
+
+/* TICKER seamless */
+.ticker-wrap {
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: none;
+}
+
+.ticker-track {
+    display: inline-flex;
+    animation: tick 32s linear infinite
+}
+
+.ticker-track:hover {
+    animation-play-state: paused
+}
+
+.ticker-seg {
+    display: inline-block;
+    padding-right: 60px
+}
+
+@keyframes tick {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+/* HERO */
+.hero {
+    background: var(--deep);
+    padding: 90px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden
+}
+
+.hero::after {
+    content: '॥';
+    position: absolute;
+    bottom: -40px;
+    right: -10px;
+    font-size: 260px;
+    color: rgba(255, 255, 255, 0.03);
+    font-family: 'Noto Serif Devanagari', serif;
+    pointer-events: none;
+    line-height: 1
+}
+
+.hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative
+}
+
+.hero-pill {
+    display: inline-block;
+    border: 1px solid rgba(232, 184, 75, 0.5);
+    color: var(--gold-lt);
+    font-size: 12px;
+    padding: 4px 18px;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px
+}
+
+.hero h1 {
+    font-family: 'Noto Serif Devanagari', 'Lora', serif;
+    font-size: clamp(40px, 8vw, 76px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 6px
+}
+
+.hero-en-title {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(16px, 3vw, 24px);
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px
+}
+
+.hero-tag {
+    font-size: 15px;
+    color: var(--gold-lt);
+    margin-bottom: 38px;
+    font-weight: 500
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap
+}
 
 .btn-g {
     background: var(--gold);
@@ -560,19 +682,20 @@ nav ul a.cur {
 /* E-MAG WITH IMAGES */
 .emag-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 20px
 }
 
 .emag-card {
     background: var(--white);
-    border-radius: 7px;
+    border-radius: 14px;
     border: 1px solid var(--border);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: all .25s ease;
+    transition: all .25s ease
 }
+
 .emag-card:hover {
     box-shadow: 0 8px 24px var(--shadow);
     transform: translateY(-2px)
@@ -589,22 +712,53 @@ nav ul a.cur {
     object-position: top;
     object-fit: cover;
     transition: transform .35s ease;
-    display: block;
+    display: block
 }
+
 .emag-card:hover .emag-img img {
     transform: scale(1.05)
 }
-.badge-issue {
-    font-size: 11px;
+
+.emag-body {
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1
+}
+
+.emag-title {
+    font-size: 15px;
     font-weight: 600;
-    text-transform: capitalize;
-    color: #fff;
+    color: var(--body-txt)
+}
+
+.emag-sub {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.dl-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: var(--deep);
-    padding: 4px 14px;
-    border-radius: 20px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    color: #fff;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    transition: background .2s;
+    text-decoration: none;
+    width: fit-content
+}
+
+.dl-btn:hover {
+    background: var(--deep2)
 }
 
 /* RACHNA */
@@ -750,9 +904,9 @@ nav ul a.cur {
 
 /* FOOTER */
 footer {
-    background: #fff;
+    background: #280101;
     color: rgba(255, 255, 255, 0.65);
-    padding: 56px 20px 24px;
+    padding: 56px 20px 24px
 }
 
 .footer-grid {
@@ -761,17 +915,17 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px
 }
+
 .footer-brand p {
     font-size: 13.5px;
     line-height: 1.8;
-    margin-top: 14px;
-    color: var(--deep);
+    margin-top: 14px
 }
 
 footer h4 {
-    color: var(--deep);
+    color: var(--gold-lt);
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 14px
@@ -786,7 +940,7 @@ footer ul li {
 }
 
 footer ul a {
-    color: var(--deep);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
     font-size: 13.5px;
     transition: color .2s
@@ -822,14 +976,11 @@ footer ul a:hover {
 .foot-bottom {
     max-width: 1120px;
     margin: 0 auto;
-    border-top: 1px solid var(--deep);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     padding-top: 18px;
     text-align: center;
     font-size: 12.5px;
-    color: rgba(255, 255, 255, 0.3);
-}
-.foot-bottom span {
-    color: var(--deep);
+    color: rgba(255, 255, 255, 0.3)
 }
 
 /* TOAST */
@@ -1003,6 +1154,9 @@ a.iss-view-new[data-e] {
         display: flex
     }
 
+    .mob-book-btn {
+        display: block
+    }
 }
 
 @media(max-width:600px) {
